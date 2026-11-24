@@ -66,6 +66,8 @@ The Compose API uses the internal Ollama URL above. The host-run development ser
 ## Voice
 Voice input uses the browser Web Speech API where supported (Chrome/Edge support varies by platform). The browser may require microphone permission and HTTPS or localhost. New tutor replies are read aloud using the selected browser/device speech voice. Choose a voice and preview it in Settings; the selection is saved in this browser. Available voices depend on the operating system and browser. If speech recognition is unavailable, type into the chat box.
 
+You can type your message in your saved native language using English/Latin letters (for example, `ami bhalo achi`) or use its normal script. The local tutor uses your language profile and chat context to understand romanized text, then replies in your native language. Your original message is saved as typed.
+
 ## Useful commands
 
 ```bash

@@ -74,7 +74,7 @@ app.post('/api/v1/chat/sessions/:id/messages',chatMessageLimiter,async(req:AuthR
   const createdAt=new Date()
   const [userMessage,reply]=await prisma.$transaction(async tx=>{
    const userMessage=await tx.message.create({data:{sessionId:session.id,role:'user',content:parsed.data.content,inputType:parsed.data.inputType,createdAt}})
-   const reply=await tx.message.create({data:{sessionId:session.id,role:'assistant',content:formatTutorResponse(tutor),createdAt:new Date(createdAt.getTime()+1)}})
+   const reply=await tx.message.create({data:{sessionId:session.id,role:'assistant',content:formatTutorResponse(tutor,session.user.nativeLanguage),createdAt:new Date(createdAt.getTime()+1)}})
    return [userMessage,reply] as const
   })
   res.json({data:{message:userMessage,reply,tutor}})
