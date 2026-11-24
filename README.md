@@ -64,7 +64,7 @@ OLLAMA_MODEL=llama3.2:3b
 The Compose API uses the internal Ollama URL above. The host-run development server uses `http://localhost:11434`. No cloud LLM key or external AI service is required. The `/api/v1/health` response reports `ready`, `model_missing`, or `unavailable` for Ollama.
 
 ## Voice
-Voice input uses the browser Web Speech API where supported (Chrome/Edge support varies by platform). The browser may require microphone permission and HTTPS or localhost. Speech output uses `speechSynthesis`. If speech recognition is unavailable, type into the chat box.
+Voice input uses the browser Web Speech API where supported (Chrome/Edge support varies by platform). The browser may require microphone permission and HTTPS or localhost. New tutor replies are read aloud using the selected browser/device speech voice. Choose a voice and preview it in Settings; the selection is saved in this browser. Available voices depend on the operating system and browser. If speech recognition is unavailable, type into the chat box.
 
 ## Useful commands
 
